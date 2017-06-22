@@ -1,6 +1,6 @@
 package basics
 
-fun main(args: Array<String>) {
+fun testLoops(args: Array<String>) {
 
     for (a: Int in 1..100) {
         println(a)
