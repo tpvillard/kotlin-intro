@@ -20,10 +20,7 @@ fun returns4(): Int {
 }
 
 // type inference works for functions too
-fun returns5() {
-    // Hum actually it does not but this is because i'm not using kotlin 1.1
-    //return 5
-}
+fun returns5() = 5
 
 fun sum(x :Int, y :Int):Int {
     return x + y

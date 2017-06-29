@@ -1,6 +1,6 @@
 package basics
 
-fun testVariables(args: Array<String>) {
+fun main(args: Array<String>) {
 
     // mutable variables
     var streetNumber: Int

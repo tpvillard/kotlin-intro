@@ -54,14 +54,14 @@ class CustomerVersion4(var id: Int, var name: String = "", val yearOfBirth: Int)
     }
 }
 
-fun test(args: Array<String>) {
+fun main(args: Array<String>) {
 
     // No new keyword !!
-    var roger = Customer()
+    val roger = Customer()
     roger.id = 10
     roger.name = "roger"
 
-    var rogerVersion1 = CustomerVersion1(1, "roger")
+    val rogerVersion1 = CustomerVersion1(1, "roger")
     rogerVersion1.id = 2
 
     var rogerVersion2 = CustomerVersion2(3, "roger")
@@ -70,7 +70,7 @@ fun test(args: Array<String>) {
 
     var rogerVersion3 = CustomerVersion3(4)
 
-    var thomas = CustomerVersion4(5, "thomas", 1968)
+    val thomas = CustomerVersion4(5, "thomas", 1968)
     // thomas.socialSecurityNumber = "1680869blablabla"
     thomas.socialSecurityNumber = "SNblablabla"
     println(thomas.socialSecurityNumber)

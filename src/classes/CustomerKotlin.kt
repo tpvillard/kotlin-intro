@@ -11,8 +11,8 @@ data class CustomerKotlin(var id: Int, var name: String, var email: String) {
 
 fun main(args: Array<String>) {
 
-    var customer1 = CustomerKotlin(1, "Thomas", "thomas@gmail.com")
-    var customer2 = CustomerKotlin(1, "Thomas", "thomas@gmail.com")
+    val customer1 = CustomerKotlin(1, "Thomas", "thomas@gmail.com")
+    val customer2 = CustomerKotlin(1, "Thomas", "thomas@gmail.com")
     println(customer1)
 
     // "==" overload equals() in kotlin!
