@@ -19,7 +19,7 @@ class CustomerVersion2(val id: Int, val name: String) {
 
 }
 
-// Another version with default vamues and initialization block
+// Another version with default values and initialization block
 class CustomerVersion3(var id: Int, var name: String = "") {
     init {
         name = name.toUpperCase()
@@ -54,7 +54,7 @@ class CustomerVersion4(var id: Int, var name: String = "", val yearOfBirth: Int)
     }
 }
 
-fun main(args: Array<String>) {
+fun test(args: Array<String>) {
 
     // No new keyword !!
     var roger = Customer()
@@ -88,11 +88,11 @@ public:
 private: only visible in the file where it is declared
 internal: only visible in the same module (what does it mean module?
 
-for class proeprties
+for class properties
 
 public
-private: only available to class menbers
-protected: only available to class menbers and subclasses
+private: only available to class members
+protected: only available to class members and subclasses
 internal: any client inside the module!
 
  */
