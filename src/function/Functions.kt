@@ -1,9 +1,5 @@
 package function
 
-fun hello() {
-    println("Hello")
-}
-
 // in fact in kotlin "void" functions return Unit
 fun anotherHello(): Unit {
     println("Hello")
@@ -33,7 +29,7 @@ fun anotherSum(x: Int, y :Int) = x + y
 fun anotherSumWithDefault(x: Int, y :Int, z :Int = 0) = x + y + z
 
 fun printDetails(name :String, email :String = "", phone :String) {
-    println("name: $name, email: $email, phone: $phone");
+    println("name: $name, email: $email, phone: $phone")
 }
 
 fun printStrings(vararg strings: String) {
@@ -43,7 +39,16 @@ fun printStrings(vararg strings: String) {
     }
 }
 
-// Caution when passing in varard
+fun reverse(aString: String): String {
+    var res = ""
+    val values = aString.toCharArray()
+    for (i in values.size - 1 downTo 0) {
+        res = res + values[i]
+    }
+    return res
+}
+
+// Caution when passing in varargs
 
 fun anotherPrintStrings(vararg strings: String) {
 
@@ -63,7 +68,6 @@ private fun reallyPrintStrings(vararg strings: String) {
 
 
 fun main(args: Array<String>) {
-    hello()
     anotherHello()
     val value = returns4()
     println(anotherSum(3, 4))
@@ -81,4 +85,5 @@ fun main(args: Array<String>) {
     printStrings("1", "2") // Nice tip here! Ctrl D to duplicate the line
     printStrings("1", "2", "3")
     printStrings("1", "2", "3", "4")
+    println(reverse("helloworld"))
 }
