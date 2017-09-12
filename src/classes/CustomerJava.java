@@ -31,6 +31,10 @@ public class CustomerJava {
         this.mail = mail;
     }
 
+    public void prettyPrint() {
+        System.out.printf("id: %d, name: %s", id , name);
+    }
+
     @Override
     public String toString() {
         return "CustomerJava{" +

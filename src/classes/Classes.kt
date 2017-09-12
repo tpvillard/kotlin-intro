@@ -2,6 +2,19 @@ package classes
 
 import java.util.*
 
+open class SuperClazz {
+    open fun method() {
+        println("Calling method from SuperClazz")
+    }
+}
+
+class SubClazz: SuperClazz() {
+
+    override fun method() {
+        println("Calling method from SubClazz")
+    }
+}
+
 // No constructor
 class Customer {
     // No such thing as field. rather properties
@@ -75,6 +88,7 @@ fun main(args: Array<String>) {
     thomas.socialSecurityNumber = "SNblablabla"
     println(thomas.socialSecurityNumber)
     thomas.printCustomerAsString()
+
 }
 
 /*
