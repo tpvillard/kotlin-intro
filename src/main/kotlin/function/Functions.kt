@@ -59,6 +59,18 @@ fun reverse(aString: String): String {
     return res
 }
 
+fun getDuplicates(values: Array<Int>): Array<out Any>? {
+    val set = HashSet<Int>()
+    val res = HashSet<Int>()
+    for (i in 0 until values.size - 1) {
+        if (set.contains(values[i])) {
+            res.add(values[i])
+        }
+        set.add(values[i])
+    }
+    return res.toArray();
+}
+
 // Caution when passing in varargs
 
 fun anotherPrintStrings(vararg strings: String) {
