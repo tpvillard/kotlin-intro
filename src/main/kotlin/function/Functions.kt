@@ -39,6 +39,17 @@ fun printStrings(vararg strings: String) {
     }
 }
 
+fun anotherReverse(aString: String): String {
+
+    val values = aString.toCharArray()
+    for (i in 0..values.size / 2) {
+        val c = values[i]
+        values[i] = values[values.size - 1 - i]
+        values[values.size - 1 - i] = c
+    }
+    return values.toString()
+}
+
 fun reverse(aString: String): String {
     var res = ""
     val values = aString.toCharArray()
