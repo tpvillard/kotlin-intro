@@ -1,7 +1,7 @@
 package basics
 
 // normal import
-//import basics.util.someUtility
+//import someUtility
 
 // named import
 import basics.util.someUtility as additionalUtility

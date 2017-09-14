@@ -1,4 +1,4 @@
 fun main(args: Array<String>) {
-    val message = "Hello form IDEA!"
+    val message = "Hello from IDEA!"
     println(message)
 }
