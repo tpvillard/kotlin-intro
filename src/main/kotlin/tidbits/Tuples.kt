@@ -1,10 +1,9 @@
 package tidbits
 
-import classes.Customer
 import classes.CustomerKotlin
 
-fun capitalAndPopulation(capital: String): Pair<String, Long> {
-    return Pair("Madrid", 2300000)
+fun capitalAndPopulation(capital: String, population: Long=0): Pair<String, Long> {
+    return Pair(capital, population)
 }
 
 fun main(args: Array<String>) {
@@ -13,7 +12,7 @@ fun main(args: Array<String>) {
     println(pair.first)
     println(pair.second)
 
-    // deconsturcting values. Provides semantics for the pair!
+    // deconstructing values. Provides semantics for the pair!
     val (capital, population) = capitalAndPopulation("Madrid")
     println(capital)
     println(population)
@@ -22,12 +21,13 @@ fun main(args: Array<String>) {
     val (id, name , email) = CustomerKotlin(124, "Villard", "villard@gmail.com")
     println(id)
     println(name)
+    println(email)
 
-    val listOfCapitalAndCountries = listOf(Pair("Paris", "France"), "Madrird" to "Spain")
+    val listOfCapitalAndCountries = listOf(Pair("Paris", "France"), "Madrid" to "Spain")
 
     // This works for for loop as well.
-    for ((capital, country) in listOfCapitalAndCountries) {
-        println(capital)
+    for ((cap, country) in listOfCapitalAndCountries) {
+        println(cap)
         println(country)
     }
 

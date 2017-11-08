@@ -33,4 +33,5 @@ fun main(args: Array<String>) {
     val str: String = input as String
     println(str.length)
 
+    hasVacations(Employee())
 }
