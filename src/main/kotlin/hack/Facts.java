@@ -1,4 +1,4 @@
-package stdlib;
+package hack;
 
 /*
  Calculate fatoriel from a number with recursion.
@@ -17,7 +17,7 @@ public class Facts {
 
     /**
      * This one is 0(n) time complexity but O(n) space complexity
-     * @param n
+     * @param n the factoriel to calculate.
      */
     public static void fact(int n) {
 
@@ -36,7 +36,7 @@ public class Facts {
         }
     }
 
-    public static void func(int n, double prod) {
+    private static void func(int n, double prod) {
         prod = n * prod;
         System.out.print(prod + " ");
         if (n < N) {
