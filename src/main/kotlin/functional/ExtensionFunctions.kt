@@ -23,6 +23,7 @@ fun Customer.makePreferred() {
 }
 
 open class BaseClass
+
 class InheritClass: BaseClass()
 
 fun BaseClass.extension() {
@@ -37,12 +38,12 @@ fun main(args: Array<String>) {
     "Hello".hello()
     println("apocalypse now".toTitleCase())
 
-    // the menber method is always preferred to the extended version.
+    // the member method is always preferred to the extended version.
     val customer = Customer()
     customer.makePreferred()
 
     // extension functions are statically resolved.
-    // even though we're poiting to the inherit instance, the base class extension will be used
+    // even though we're pointing to the inherited instance, the base class extension will be used
     val instance: BaseClass = InheritClass()
     instance.extension()
 }
